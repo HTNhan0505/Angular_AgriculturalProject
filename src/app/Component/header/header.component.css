@@ -1,0 +1,20 @@
+header {
+  background-color: #20c31d;
+}
+/* search bar */
+.header__search {
+  min-width: 350px;
+}
+.header__search-input {
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.header__search-icon {
+  color: #212529;
+}
+/* header-list */
+.header__list-button {
+  font-weight: 700;
+  border-right: #2c2d2e solid 1px;
+}

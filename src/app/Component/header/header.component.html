@@ -1,0 +1,26 @@
+<header class="fixed w-full top-0 left-0 right-0 z-10 shadow-md">
+    <div class="header flex justify-around py-4 px-0 items-center">
+        <a class="decoration-none" routerLink="">
+            <img src="../../../assets/Img/ngân huy logo ngang.jpeg" class="h-12 w-52" />
+        </a>
+        <div class="header__search relative flex">
+            <form class="relative w-full">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...."
+                    class="header__search-input pr-14 pl-2 min-h-[40px] w-full outline-none ">
+
+                <button class="absolute min-h-[40px] right-0 top-0 border-none py-0 px-3 text-center"><i
+                        class="fa-solid fa-magnifying-glass header__search-icon"></i></button>
+            </form>
+        </div>
+
+        <ul class="header__list flex items-center">
+            <li class="header__list-button px-4 text-white  text-[14px]">
+                <a routerLink="admin">Admin</a>
+            </li>
+            <li class="px-4 text-white">Giỏ hàng / 0 đ
+                <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+
+        </ul>
+    </div>
+</header>
