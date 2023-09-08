@@ -16,3 +16,13 @@
   background-color: #008848;
   color: #fff;
 }
+td {
+  text-align: center;
+}
+td img {
+  display: inline;
+  width: 90px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 10px;
+}

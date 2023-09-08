@@ -7,16 +7,13 @@ import { ContainerComponent } from './Component/container/container.component';
 import { HeaderComponent } from './Component/header/header.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { AdminComponent } from './Pages/admin/admin.component';
-import { CreateProductComponent } from './Pages/create-product/create-product.component';
-import { ListProductComponent } from './Pages/list-product/list-product.component';
-import { EditProductComponent } from './Pages/edit-product/edit-product.component';
 import { environment } from 'src/environments/environment';
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 
 @NgModule({
@@ -26,9 +23,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     AdminComponent,
-    CreateProductComponent,
-    ListProductComponent,
-    EditProductComponent
   ],
 
   imports: [
@@ -39,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
