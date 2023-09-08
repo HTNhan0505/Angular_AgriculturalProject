@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "product-data-79324": {
+      "hosting": {
+        "test-project": [
+          "product-data-79324"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "product-data-79324"
+  }
+}

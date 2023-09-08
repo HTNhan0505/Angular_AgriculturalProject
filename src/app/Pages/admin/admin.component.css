@@ -1,0 +1,18 @@
+.btn {
+  max-height: 50px;
+  background-color: #fff;
+  color: #008848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border-radius: 5px;
+  transition: color 0.3s;
+  border: 1px solid #008848;
+  font-size: 16px;
+  line-height: 16px;
+}
+.btn:hover {
+  background-color: #008848;
+  color: #fff;
+}
