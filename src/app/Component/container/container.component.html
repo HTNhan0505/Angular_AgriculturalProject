@@ -20,86 +20,13 @@
                 </li>
             </ul>
         </div>
-        <div class="product absolute right-0  max-w-[75%] pl-4">
+        <div class="product absolute right-0 w-[75%] pl-4">
             <div class="product__header py-3 bg-[#f7f8f9]">
                 <h3 class="text-[#33333] font-bold text-lg pl-2">
                     Sản phẩm yêu thích
                 </h3>
             </div>
             <div class="product__content">
-                <div class="w-full flex">
-                    <!-- 1 product -->
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/Product1.jpeg"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Bột Trộn Sẵn Bánh Muffin Chocolate 1kg/ Muffin Chocolate
-                                1kg</h3>
-                            <span class="product__content-price">57,000 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/product2.jpeg"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Bột Mì Xe Đạp Kim Cương 25kg/ Diamond Bicycle 25 PP</h3>
-                            <span class="product__content-price">17,600 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/product3.jpeg"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Bột Trộn Sẵn Bông lan Plus 1kg</h3>
-                            <span class="product__content-price">48,000 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/Product5.png"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Túi Bánh Mì Que</h3>
-                            <span class="product__content-price">17,000 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/Product1.jpeg"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Bột Trộn Sẵn Bánh Muffin Chocolate 1kg/ Muffin Chocolate
-                                1kg</h3>
-                            <span class="product__content-price">57,000 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
-                        <div class="product__content-img w-full cursor-pointer">
-                            <img src="../../../assets/Img/Product4.jpeg"
-                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="product__content-title">Bột bánh bông lan & cookies 1kg Số 8 / Cake&cookies flour
-                                1kg No.08 (10gói/thùng)</h3>
-                            <span class="product__content-price">25,500 ₫</span>
-                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- row product -->
                 <div class="w-full flex">
                     <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
                         <div class="product__content-img w-full cursor-pointer">
@@ -169,8 +96,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full flex">
-                    <!-- 1 product -->
+                <!-- row -->
+                <div class="w-full flex" *ngFor="let product of productList">
+                    <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
+                        <div class="product__content-img w-full cursor-pointer">
+                            <img src="../../../assets/Img/Product1.jpeg"
+                                class="transition duration-500 ease-in-out w-full max-h-full object-contain h-[200px] hover:scale-110 px-3">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="product__content-title">{{product.product_name}}</h3>
+                            <span class="product__content-price">{{product.price}}</span>
+                            <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="w-full flex">
                     <div class="bg-white w-2/12 p-3 flex flex-col h-auto relative border-bottom-right">
                         <div class="product__content-img w-full cursor-pointer">
                             <img src="../../../assets/Img/Product6.jpeg"
@@ -240,7 +181,7 @@
                             <button class="product__content-btn w-full flex ">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
